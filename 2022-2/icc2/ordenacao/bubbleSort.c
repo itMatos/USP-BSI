@@ -7,32 +7,30 @@ void swap (int *indexA, int *indexB) {
   *indexB = aux;
 }
 
-int leftGreater(int leftElement, int rightElement) {
-  return leftElement > rightElement ? 1 : 0;
-}
-
 int bubbleSort(int *array, int size) {
   for (int i = 0; i < size - 1; i++) {
-
     for (int j = 0; j < size - i - 1; j++) {
+      printf("C %d %d\n", j, j+1);
+      
       if (array[j] > array[j + 1]) {
+        printf("T %d %d\n", j, j+1);
         swap(&array[j], &array[j + 1]);
       }
     }
   }
 }
-
+ 
 void printArray(int *array, int size) {
-  
+  for (int i = 0; i < size; i++){
+    printf("%d ", array[i]);
+  }
+  printf("\n");
 }
 
 int main() {
-  int vet[] = {5, 4, 3, 2, 1};
+  int tamanho = 4;
+  int vet[] = { 3, 6, 5, 2 };
 
-  bubbleSort(vet, 5);
-
-  for (int i = 0; i < 5; i++){
-    printf("%d ", vet[i]);
-  }
-  printf("\n");
+  bubbleSort(vet, tamanho);
+  printArray(vet, tamanho);
 }
