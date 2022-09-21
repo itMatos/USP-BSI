@@ -26,9 +26,19 @@ void insertionSort (int *array, int size) {
   }
 }
 
+// { 8, 6, 3, 2, 7, 5 }
+// 8
+
+// 8  6   6 maior do que 8, ordena
+// 6  8
+
+// 6  8  3  ordena, indice 0
+// 3  6  8
+
 int main(){
-  int vetor[] = { 3, 6, 5, 2 };
-  printfArray(vetor, 4);
-  insertionSort(vetor, 4);
-  printfArray(vetor, 4);
+  int vetor[] = { 8, 6, 3, 2, 7, 5 };
+  printfArray(vetor, 6);
+  // printf("\n");
+  insertionSort(vetor, 6);
+  printfArray(vetor, 6);
 }
